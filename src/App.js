@@ -1,7 +1,9 @@
 import React from 'react';
-import {  createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Link, Outlet, } from 'react-router-dom';
-import Categories from "./components/Categories"
-import BookStore from "./components/BookStore"
+import {
+  createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Link, Outlet,
+} from 'react-router-dom';
+import Categories from './components/Categories';
+import BookStore from './components/BookStore';
 import './App.css';
 
 function App() {

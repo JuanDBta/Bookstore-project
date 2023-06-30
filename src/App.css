@@ -69,6 +69,13 @@ h2 {
   margin-top: 2vw;
 }
 
+.books-container {
+  width: 90%;
+  height: auto;
+  background-color: rgb(194, 135, 248);
+  margin-top: 5vw;
+}
+
 .booklist {
   list-style: none;
   margin-top: 5vw;
