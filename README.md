@@ -88,9 +88,9 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-Web Browser (Chrome recommended)
-Code editor (VS recommended)
-GitHub account
+Web Browser (Chrome recommended)<br>
+Code editor (VS recommended)<br>
+GitHub account<br>
 Node.js environment
 
 ### Setup
@@ -111,7 +111,7 @@ Install this project executing the following command:
 
 ### Usage
 
-To run the project, go to /math-magicians directory and execute the following command:
+To run the project, go to /bookstore-project directory and execute the following command:
 
 ```sh
 npm start
