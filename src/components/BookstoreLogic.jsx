@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import BookList from './BookList';
-import Addbook from './AddBook';
+import AddBook from './AddBook';
 
-const BooksLogic = () => {
-  const books = [
+const BookstoreLogic = () => {
+  const [books, setBooks] = useState([
     {
-      id: 1,
+      id: uuidv4(),
       title: 'Delirio',
       author: 'Laura Restrepo',
       category: 'drama',
@@ -13,29 +14,33 @@ const BooksLogic = () => {
       current_chapter: '17',
     },
     {
-      id: 2,
+      id: uuidv4(),
       title: 'Sin Remedio',
       author: 'Antonio Caballero',
       category: 'fiction',
       status: '30%',
       current_chapter: '5',
     },
-    {
-      id: 3,
-      title: 'Historia del Arte',
-      author: 'Ernst Gombrich',
-      category: 'history',
-      status: '80%',
-      current_chapter: '27',
-    },
-  ];
+  ]);
+
+  const addBookItem = (title, author, category) => {
+    const newBook = {
+      id: uuidv4(),
+      title,
+      author,
+      category,
+      status: '40%',
+      current_chapter: '6',
+    };
+    setBooks([...books, newBook]);
+  };
 
   return (
     <div className="books-container">
       <BookList booksProps={books} />
-      <Addbook />
+      <AddBook addBookItem={addBookItem} />
     </div>
   );
 };
 
-export default BooksLogic;
+export default BookstoreLogic;

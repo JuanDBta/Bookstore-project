@@ -86,6 +86,15 @@ h2 {
   font-size: 1vw;
 }
 
-.add-book {
+.add-book-form {
   margin-top: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+h3 {
+  margin-top: -0.15vw;
+  padding-right: 1vw;
 }
