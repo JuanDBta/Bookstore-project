@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 225, 225);
+}
+
+.navbar {
+  width: 90vw;
+  height: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar-title {
+  font-size: 5vw;
+  color: rgb(38, 145, 233);
+  margin-top: 1vw;
+}
+
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  list-style: none;
+  gap: 2vw;
+}
+
+.navbar-item {
+  font-size: 2vw;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  border-right: 2px black solid;
+  padding-right: 1.5vw;
+  font-weight: 800;
+  position: relative;
+  top: 2.5vw;
+}
+
+.categories {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+h2 {
+  color: rgb(138, 116, 116);
+  font-size: 4vw;
+  font-weight: 400;
+  text-align: left;
+  margin-top: 10vw;
+}
+
+.cat-description {
+  color: rgb(245, 14, 14);
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 2vw;
+}
+
+.books-container {
+  width: 90%;
+  height: auto;
+  background-color: rgb(194, 135, 248);
+  margin-top: 5vw;
+}
+
+.booklist {
+  list-style: none;
+  margin-top: 5vw;
+}
+
+.book-item {
+  margin-top: 1vw;
+  font-size: 1vw;
+}
+
+.add-book-form {
+  margin-top: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+h3 {
+  margin-top: -0.15vw;
+  padding-right: 1vw;
+}
