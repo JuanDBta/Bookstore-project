@@ -36,10 +36,12 @@
 
 # 📖 Bookstore Website <a name="about-project"></a>
 
-**[Bookstore Website]** The Bookstore is a website built with React. This in an simplified version that allows you to: Display a list of books, Add a book, Remove a selected book.
+**[Bookstore Website]** The Bookstore is a website built with React & Redux. This in an simplified version that allows you to: Display a list of books, Add a book, Remove a selected book.
 
 ## 🛠 Built With <a name="built-with"></a>
-1- REACT
+1- REACT<br>
+2- REDUX TOOLKIT
+
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -60,8 +62,9 @@
 - **[Added index.js]**
 - **[Added /src]**
 - **[Added /public]**
-- **[Added /components]**
-- **[Added linters**
+- **[Added /src/components]**
+- **[Added /src/redux]**
+- **[Added linters]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
