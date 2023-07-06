@@ -55,20 +55,24 @@ const Books = () => {
       </button>
       <ul>
         {books.map((book) => (
-          <li key={book.itemId}>
-            <div>
-              <strong>Title:</strong> {book.title}
+          <div key={book.itemId} className="book-item">
+            <li className="book-category">{book.category}</li>
+            <li className="book-title">{book.title}</li>
+            <li className="book-author">{book.author}</li>
+            <div className="book-buttons">
+              <button type="button" className="comment-button">Comment</button>
+              <button type="button" className="delete-button">Delete</button>
+              <button type="button" className="edit-button">Edit</button>
             </div>
-            <div>
-              <strong>Author:</strong> {book.author}
-            </div>
-            <div>
-              <strong>Category:</strong> {book.category}
-            </div>
-            <button type="button" onClick={() => handleDeleteBook(book.itemId)}>
-              Delete
-            </button>
-          </li>
+            <li className="book-status">
+              {book.status}
+              {' '}
+              Completed
+            </li>
+            <li className="current-chapter">CURRENT CHAPTER</li>
+            <li className="book-chapter">{book.current_chapter}</li>
+            <button type="button" className="update-button">UPDATE PROGRESS</button>
+          </div>
         ))}
       </ul>
     </section>
