@@ -9,15 +9,15 @@ const Books = () => {
 
   const handleAddBook = () => {
     const newBook = {
-      id: books.length,
+      itemId: books.length,
       title,
     };
     dispatch(addBook(newBook));
     setTitle('');
   };
 
-  const handleDeleteBook = (id) => {
-    dispatch(removeBook(id));
+  const handleDeleteBook = (itemId) => {
+    dispatch(removeBook(itemId));
   };
 
   return (
@@ -38,9 +38,9 @@ const Books = () => {
       </button>
       <ul>
         {books.map((book) => (
-          <li key={book.id}>
+          <li key={book.itemId}>
             {book.title}
-            <button type="button" onClick={() => handleDeleteBook(book.id)}>
+            <button type="button" onClick={() => handleDeleteBook(book.itemId)}>
               Delete
             </button>
           </li>
