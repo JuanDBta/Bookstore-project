@@ -28,12 +28,7 @@ const Books = () => {
   };
 
   return (
-    <section>
-      <h3>Books</h3>
-      <p>
-        Number of Books:
-        {books.length}
-      </p>
+    <section className="books-container">
       <input
         type="text"
         value={title}
@@ -55,7 +50,13 @@ const Books = () => {
       <button type="submit" onClick={handleAddBook}>
         ADD NEW BOOK
       </button>
-      <ul>
+      <p className="number-books">
+        Number of Books:
+        (
+        {books.length}
+        )
+      </p>
+      <ul className="booklist">
         {books.map((book) => (
           <div key={book.itemId} className="book-item">
             <li className="book-category">{book.category}</li>
