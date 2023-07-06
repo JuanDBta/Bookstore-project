@@ -30,7 +30,7 @@ const Books = () => {
 
   return (
     <section className="books-container">
-      <p>
+      <p className="number-books">
         Number of Books:
         {books.length}
       </p>
