@@ -1,6 +1,8 @@
+// Books.jsx
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBook, removeBook } from './booksSlice';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook, removeBook } from '../redux/features/books/booksSlice';
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
@@ -11,6 +13,7 @@ const Books = () => {
 
   const handleAddBook = () => {
     const newBook = {
+      itemId: uuidv4(),
       title,
       author,
       category,
@@ -60,8 +63,14 @@ const Books = () => {
             <li className="book-title">{book.title}</li>
             <li className="book-author">{book.author}</li>
             <div className="book-buttons">
+              <button
+                type="button"
+                className="delete-button"
+                onClick={() => handleDeleteBook(book.itemId)}
+              >
+                Delete
+              </button>
               <button type="button" className="comment-button">Comment</button>
-              <button type="button" className="delete-button">Delete</button>
               <button type="button" className="edit-button">Edit</button>
             </div>
             <li className="book-status">
