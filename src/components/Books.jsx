@@ -1,4 +1,3 @@
-// Books.jsx
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
@@ -29,13 +28,34 @@ const Books = () => {
   };
 
   return (
-    <section className="books-container">
-      <p className="number-books">
+    <section>
+      <h3>Books</h3>
+      <p>
         Number of Books:
         {books.length}
       </p>
-
-      <ul className="booklist">
+      <input
+        type="text"
+        value={title}
+        placeholder="Add book title..."
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <input
+        type="text"
+        value={author}
+        placeholder="Add book author..."
+        onChange={(e) => setAuthor(e.target.value)}
+      />
+      <input
+        type="text"
+        value={category}
+        placeholder="Add book category..."
+        onChange={(e) => setCategory(e.target.value)}
+      />
+      <button type="submit" onClick={handleAddBook}>
+        ADD NEW BOOK
+      </button>
+      <ul>
         {books.map((book) => (
           <div key={book.itemId} className="book-item">
             <li className="book-category">{book.category}</li>
@@ -63,30 +83,6 @@ const Books = () => {
           </div>
         ))}
       </ul>
-
-      <form className="add-book-form">
-        <input
-          type="text"
-          value={title}
-          placeholder="Add book title..."
-          onChange={(e) => setTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          value={author}
-          placeholder="Add book author..."
-          onChange={(e) => setAuthor(e.target.value)}
-        />
-        <input
-          type="text"
-          value={category}
-          placeholder="Add book category..."
-          onChange={(e) => setCategory(e.target.value)}
-        />
-        <button type="submit" onClick={handleAddBook}>
-          ADD NEW BOOK
-        </button>
-      </form>
     </section>
   );
 };
