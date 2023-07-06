@@ -1,8 +1,8 @@
 import React from 'react';
-import BooksLogic from './BookstoreLogic';
+import Books from './Books';
 
 const Bookstore = () => (
-  <BooksLogic />
+  <Books />
 );
 
 export default Bookstore;
