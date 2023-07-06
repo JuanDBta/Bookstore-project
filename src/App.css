@@ -73,12 +73,18 @@ h2 {
   width: 90%;
   height: auto;
   background-color: rgb(194, 135, 248);
-  margin-top: 5vw;
+  margin-top: 6vw;
+}
+
+.number-books {
+  font-size: 2vw;
+  font-weight: 800;
+  margin-top: 0;
 }
 
 .booklist {
   list-style: none;
-  margin-top: 5vw;
+  margin-top: -2vw;
 }
 
 .book-item {
@@ -92,6 +98,7 @@ h2 {
   flex-direction: row;
   justify-content: left;
   align-items: flex-start;
+  margin-bottom: 1vw;
 }
 
 h3 {
