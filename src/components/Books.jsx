@@ -29,34 +29,13 @@ const Books = () => {
   };
 
   return (
-    <section>
-      <h3>Books</h3>
+    <section className="books-container">
       <p>
         Number of Books:
         {books.length}
       </p>
-      <input
-        type="text"
-        value={title}
-        placeholder="Add book title..."
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        value={author}
-        placeholder="Add book author..."
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        value={category}
-        placeholder="Add book category..."
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      <button type="submit" onClick={handleAddBook}>
-        ADD NEW BOOK
-      </button>
-      <ul>
+
+      <ul className="booklist">
         {books.map((book) => (
           <div key={book.itemId} className="book-item">
             <li className="book-category">{book.category}</li>
@@ -84,6 +63,30 @@ const Books = () => {
           </div>
         ))}
       </ul>
+
+      <form className="add-book-form">
+        <input
+          type="text"
+          value={title}
+          placeholder="Add book title..."
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          type="text"
+          value={author}
+          placeholder="Add book author..."
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <input
+          type="text"
+          value={category}
+          placeholder="Add book category..."
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        <button type="submit" onClick={handleAddBook}>
+          ADD NEW BOOK
+        </button>
+      </form>
     </section>
   );
 };
