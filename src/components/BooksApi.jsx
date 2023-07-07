@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
 import { addBooks, deleteBook, getBooks } from '../redux/features/books/booksApiSlice';
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
+  const addNew = useSelector((state) => state.books.addNew);
+  const deleted = useSelector((state) => state.books.deleted);
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (addNew) {
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+    }
+  }, [addNew]);
+
+  useEffect(() => {
+    if (deleted) {
+      dispatch(getBooks());
+    }
+  }, [deleted, dispatch]);
+
   const handleAddBook = () => {
     const newBook = {
-      itemId: uuidv4(),
       title,
       author,
       category,
     };
     dispatch(addBooks(newBook));
-    setTitle('');
-    setAuthor('');
-    setCategory('');
   };
 
   const handleDeleteBook = (itemId) => {
@@ -47,18 +62,17 @@ const Books = () => {
         placeholder="Add book category..."
         onChange={(e) => setCategory(e.target.value)}
       />
-      <button type="submit" onClick={handleAddBook}>
+      <button type="button" onClick={handleAddBook}>
         ADD NEW BOOK
       </button>
       <p className="number-books">
-        Number of Books:
-        (
+        Number of Books: (
         {books.length}
         )
       </p>
       <ul className="booklist">
         {books.map((book) => (
-          <div key={book.itemId} className="book-item">
+          <div key={book.item_id} className="book-item">
             <li className="book-category">{book.category}</li>
             <li className="book-title">{book.title}</li>
             <li className="book-author">{book.author}</li>
@@ -66,7 +80,7 @@ const Books = () => {
               <button
                 type="button"
                 className="delete-button"
-                onClick={() => handleDeleteBook(book.itemId)}
+                onClick={() => handleDeleteBook(book.item_id)}
               >
                 Delete
               </button>
