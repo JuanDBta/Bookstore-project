@@ -12,6 +12,12 @@ const Books = () => {
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
+  const statusCircle = {
+    '--p': '80',
+    '--b': '5px',
+    '--c': '#0290ff',
+  };
+
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
@@ -67,60 +73,75 @@ const Books = () => {
 
   return (
     <section className="books-container">
-      <input
-        type="text"
-        value={title}
-        placeholder="Add book title..."
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        value={author}
-        placeholder="Add book author..."
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        value={category}
-        placeholder="Add book category..."
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      <button type="button" onClick={handleAddBook}>
-        ADD NEW BOOK
-      </button>
-      <p className="number-books">
-        Number of Books: (
-        {books.length}
-        )
-      </p>
+
       <ul className="booklist">
         {books.map((book) => (
           <div key={book.item_id} className="book-item">
-            <li className="book-category">{book.category}</li>
-            <li className="book-title">{book.title}</li>
-            <li className="book-author">{book.author}</li>
-            <div className="book-buttons">
-              <button
-                type="button"
-                className="delete-button"
-                onClick={() => handleDeleteBook(book.item_id)}
-              >
-                Delete
-              </button>
-              <button type="button" className="comment-button">Comment</button>
-              <button type="button" className="edit-button">Edit</button>
+            <div className="book-element1">
+              <div className="book-description">
+                <li className="book-category">{book.category}</li>
+                <li className="book-title">{book.title}</li>
+                <li className="book-author">{book.author}</li>
+              </div>
+              <div className="book-buttons">
+                <button type="button" className="comment-button">Comment</button>
+                <button
+                  type="button"
+                  className="delete-button"
+                  onClick={() => handleDeleteBook(book.item_id)}
+                >
+                  Remove
+                </button>
+                <button type="button" className="edit-button">Edit</button>
+              </div>
             </div>
-            <li className="book-status">
-              {book.status}
-              {' '}
-              Completed
-            </li>
-            <li className="current-chapter">CURRENT CHAPTER</li>
-            <li className="book-chapter">{book.current_chapter}</li>
-            <button type="button" className="update-button">UPDATE PROGRESS</button>
+
+            <div className="book-element2">
+              <li className="book-status">
+                <div className="circle" style={statusCircle} />
+                <div className="status-description">
+                  <h3 className="porcentage">64%</h3>
+                  <p className="status">Completed</p>
+                </div>
+              </li>
+            </div>
+
+            <div className="book-element3">
+              <li className="current-chapter">CURRENT CHAPTER</li>
+              <li className="book-chapter">Chapter 7</li>
+              <button type="button" className="update-button">UPDATE PROGRESS</button>
+            </div>
           </div>
         ))}
       </ul>
+
+      <h3 className="form-title">ADD NEW BOOK</h3>
+      <form className="add-book-form">
+        <input
+          className="input-title"
+          type="text"
+          value={title}
+          placeholder="Book title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className="input-author"
+          type="text"
+          value={author}
+          placeholder="Book author"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <input
+          className="input-category"
+          type="text"
+          value={category}
+          placeholder="Book category "
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        <button className="add-book-button" type="button" onClick={handleAddBook}>
+          ADD BOOK
+        </button>
+      </form>
     </section>
   );
 };
