@@ -68,7 +68,7 @@ body {
   cursor: pointer;
   padding-right: 1vw;
   position: relative;
-  top: -1.1vw;
+  top: 1vw;
 }
 
 .nav-item.active,
