@@ -80,7 +80,7 @@ body {
 .nav-icon {
   width: 1rem;
   height: 1rem;
-  margin-left: 39.5vw;
+  margin-left: 38vw;
   margin-top: 2vw;
 }
 
@@ -115,12 +115,6 @@ h2 {
   margin-top: 0;
   display: flex;
   flex-direction: column;
-}
-
-.number-books {
-  font-size: 2vw;
-  font-weight: 800;
-  margin-top: 0;
 }
 
 .booklist {
@@ -223,7 +217,6 @@ h2 {
 
 .book-element2 {
   margin-top: -0.8vw;
-  
 }
 
 .book-status {
@@ -274,7 +267,7 @@ h2 {
 .porcentage {
   width: 5vw;
   height: 3vw;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 3vw;
   font-weight: normal;
   font-stretch: normal;
@@ -290,7 +283,7 @@ h2 {
   width: 4.2vw;
   margin: 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1.4vw;
   font-weight: normal;
   font-stretch: normal;
@@ -304,11 +297,11 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: left;
+  align-items: flex-start;
   border-left: 1px #e8e8e8 solid;
   height: 5.5vw;
   padding-left: 8vw;
-  margin-top: 2vw;
+  margin-top: 2.5vw;
   margin-right: 7vw;
 }
 
@@ -325,7 +318,7 @@ h2 {
 }
 
 .book-chapter {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1.2vw;
   font-weight: 300;
   font-stretch: normal;
@@ -348,12 +341,28 @@ h2 {
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   border-radius: 3px;
   background-color: #0290ff;
 }
 
+.form-title {
+  margin-left: 6.188vw;
+  margin-top: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
 .add-book-form {
+  width: 87.5vw;
+  height: 3vw;
+  margin-left: 6.188vw;
   margin-top: 1vw;
   display: flex;
   flex-direction: row;
@@ -362,7 +371,36 @@ h2 {
   margin-bottom: 1vw;
 }
 
-h3 {
-  margin-top: -0.15vw;
-  padding-right: 1vw;
+input {
+  height: 3vw;
+  margin-right: 1vw;
+  width: 20.5vw;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: 1vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+  padding-left: 1vw;
+}
+
+.add-book-button {
+  border-radius: 3px;
+  height: 3vw;
+  width: 11.5vw;
+  background-color: #0290ff;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.813vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }

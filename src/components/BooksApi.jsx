@@ -115,33 +115,32 @@ const Books = () => {
         ))}
       </ul>
 
+      <h3 className="form-title">ADD NEW BOOK</h3>
       <form className="add-book-form">
         <input
+          className="input-title"
           type="text"
           value={title}
-          placeholder="Add book title..."
+          placeholder="Book title"
           onChange={(e) => setTitle(e.target.value)}
         />
         <input
+          className="input-author"
           type="text"
           value={author}
-          placeholder="Add book author..."
+          placeholder="Book author"
           onChange={(e) => setAuthor(e.target.value)}
         />
         <input
+          className="input-category"
           type="text"
           value={category}
-          placeholder="Add book category..."
+          placeholder="Book category "
           onChange={(e) => setCategory(e.target.value)}
         />
-        <button type="button" onClick={handleAddBook}>
-          ADD NEW BOOK
+        <button className="add-book-button" type="button" onClick={handleAddBook}>
+          ADD BOOK
         </button>
-        <p className="number-books">
-          Number of Books: (
-          {books.length}
-          )
-        </p>
       </form>
     </section>
   );
