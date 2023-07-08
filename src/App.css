@@ -356,6 +356,7 @@ h2 {
   border-radius: 3px;
   background-color: #0290ff;
   cursor: pointer;
+  border: none;
 }
 
 .form-title {
@@ -416,4 +417,5 @@ input {
   text-align: center;
   color: #fff;
   cursor: pointer;
+  border: none;
 }
