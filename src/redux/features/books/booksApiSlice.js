@@ -36,13 +36,18 @@ export const addBooks = createAsyncThunk('books/addBooks',
   });
 
 export const deleteBook = createAsyncThunk('books/deleteBook',
-  async (itemId, thunkAPI) => {
+  async (item_id, thunkAPI) => {// eslint-disable-line
     try {
-      await axios.delete(`${url}/${itemId}`);
+      await axios.delete(`${url}${item_id}`);// eslint-disable-line
       thunkAPI.dispatch(getBooks());
-      return itemId;
+      return item_id;// eslint-disable-line
     } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      const {
+        message, name, code, config, request,
+      } = error;
+      return thunkAPI.rejectWithValue({
+        message, name, code, config, request,
+      });
     }
   });
 

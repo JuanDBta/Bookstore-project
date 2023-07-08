@@ -34,13 +34,13 @@ const Books = () => {
     try {
       const app_id = 'qiKtD5mkwRN26fLwBUzY';// eslint-disable-line
       const newBook = {
-        item_id: uuidv4(), // eslint-disable-line
+        item_id: uuidv4(),
         title,
         author,
         category,
       };
 
-      const response = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`, { // eslint-disable-line
+      const response = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`, {// eslint-disable-line
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,12 +54,16 @@ const Books = () => {
         throw new Error('Failed to add book');
       }
     } catch (error) {
-      console.log(error);
+      console.log(error);// eslint-disable-line
     }
   };
 
-  const handleDeleteBook = (itemId) => {
-    dispatch(deleteBook(itemId));
+  const handleDeleteBook = (item_id) => {// eslint-disable-line
+    dispatch(deleteBook(item_id))
+      .unwrap()
+      .catch((error) => {
+        console.log(error);// eslint-disable-line
+      });
   };
 
   return (
