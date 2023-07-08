@@ -167,7 +167,7 @@ h2 {
 
 .book-author {
   margin-left: 1.688vw;
-  width: 6.688vw;
+  width: 10.688vw;
   height: 1.188vw;
   margin-top: 0.25vw;
   font-family: RobotoSlab, sans-serif;
@@ -207,8 +207,9 @@ h2 {
   width: 5.5vw;
 }
 
-.remove-button {
+.delete-button {
   width: 5.5vw;
+  cursor: pointer;
 }
 
 .edit-button {
@@ -344,11 +345,12 @@ h2 {
   color: #fff;
   border-radius: 3px;
   background-color: #0290ff;
+  cursor: pointer;
 }
 
 .form-title {
   margin-left: 6.188vw;
-  margin-top: 0;
+  margin-top: 0.5vw;
   font-family: Montserrat, sans-serif;
   font-size: 1.25vw;
   font-weight: bold;
@@ -363,7 +365,7 @@ h2 {
   width: 87.5vw;
   height: 3vw;
   margin-left: 6.188vw;
-  margin-top: 1vw;
+  margin-top: 0.5vw;
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -403,4 +405,5 @@ input {
   letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
 }
