@@ -8,15 +8,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(235, 225, 225);
+  background-color: #f5f6fa;
 }
 
 .navbar {
-  width: 90vw;
-  height: 3vw;
+  width: 100vw;
+  height: 7vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  border-bottom: 1px #e8e8e8 solid;
+  padding-left: 5vw;
+  background-color: #ffff;
 }
 
 .navbar-title {
