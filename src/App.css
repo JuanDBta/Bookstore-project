@@ -11,21 +11,36 @@ body {
   background-color: #f5f6fa;
 }
 
+.main-container {
+  width: 87.5vw;
+  height: 68.5vw;
+  margin: 9.3vw 6.063vw 6.063vw 6.063vw;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
 .navbar {
-  width: 100vw;
-  height: 7vw;
+  width: 87.5vw;
+  height: 5.938vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   border-bottom: 1px #e8e8e8 solid;
-  padding-left: 5vw;
+  padding-left: 6.188vw;
   background-color: #ffff;
 }
 
 .navbar-title {
-  font-size: 3vw;
-  color: rgb(38, 145, 233);
-  margin-top: 1vw;
+  font-family: Montserrat;
+  font-size: 1.875vw;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+  margin-top: 2vw;
 }
 
 .navbar-list {
@@ -37,14 +52,19 @@ body {
 }
 
 .navbar-item {
-  font-size: 1.2vw;
-  color: rgb(194, 179, 179);
+  font-family: Montserrat;
+  font-size: 0.813vw;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
   text-decoration: none;
   cursor: pointer;
-  padding-right: 1.5vw;
-  font-weight: 400;
+  padding-right: 1vw;
   position: relative;
-  top: 1.2vw;
+  top: 0.9vw;
 }
 
 .nav-item.active,
@@ -53,6 +73,12 @@ body {
   font-weight: bold;
 }
 
+.nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 44vw;
+  margin-top: 2vw;
+}
 .categories {
   width: 90vw;
   height: auto;
@@ -78,10 +104,10 @@ h2 {
 }
 
 .books-container {
-  width: 90%;
-  height: auto;
-  background-color: rgb(194, 135, 248);
-  margin-top: 6vw;
+  width: 87.5vw;
+  height: 68.563vw;
+  background-color: #fafafa;
+  margin-top: 0;
 }
 
 .number-books {
