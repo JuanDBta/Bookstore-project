@@ -227,7 +227,7 @@ h2 {
 }
 
 .book-element2 {
-  margin-top: -0.8vw;
+  margin-top: -0.4vw;
 }
 
 .book-status {
@@ -240,7 +240,7 @@ h2 {
 .circle {
   position: relative;
 
-  --w: 40px;
+  --w: 70px;
 
   width: var(--w);
   height: var(--w);
