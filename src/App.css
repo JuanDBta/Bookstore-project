@@ -16,11 +16,11 @@ body {
   height: 3vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .navbar-title {
-  font-size: 5vw;
+  font-size: 3vw;
   color: rgb(38, 145, 233);
   margin-top: 1vw;
 }
@@ -30,19 +30,24 @@ body {
   flex-direction: row;
   justify-content: right;
   list-style: none;
-  gap: 2vw;
+  gap: 1vw;
 }
 
 .navbar-item {
-  font-size: 2vw;
-  color: black;
+  font-size: 1.2vw;
+  color: rgb(194, 179, 179);
   text-decoration: none;
   cursor: pointer;
-  border-right: 2px black solid;
   padding-right: 1.5vw;
-  font-weight: 800;
+  font-weight: 400;
   position: relative;
-  top: 2.5vw;
+  top: 1.2vw;
+}
+
+.nav-item.active,
+.navbar-item:hover {
+  color: black;
+  font-weight: bold;
 }
 
 .categories {

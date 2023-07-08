@@ -12,8 +12,8 @@ function App() {
       <nav className="navbar">
         <h1 className="navbar-title">Bookstore CMS</h1>
         <ul className="navbar-list">
-          <li><Link to="/" className="navbar-item">Books</Link></li>
-          <li><Link to="/categories" className="navbar-item">Categories</Link></li>
+          <li><Link to="/" className="navbar-item">BOOKS</Link></li>
+          <li><Link to="/categories" className="navbar-item">CATEGORIES</Link></li>
         </ul>
       </nav>
       <Routes>
