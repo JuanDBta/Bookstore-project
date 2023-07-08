@@ -206,15 +206,24 @@ h2 {
 
 .comment-button {
   width: 5.5vw;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right: 1px #e8e8e8 solid;
 }
 
 .delete-button {
   width: 5.5vw;
   cursor: pointer;
+  border: none;
 }
 
 .edit-button {
   width: 3.5vw;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px #e8e8e8 solid;
 }
 
 .book-element2 {
