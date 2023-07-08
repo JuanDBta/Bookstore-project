@@ -109,8 +109,8 @@ h2 {
 }
 
 .books-container {
-  width: 80.5vw;
-  height: 68.563vw;
+  width: 87.5vw;
+  height: auto;
   background-color: #fafafa;
   margin-top: 0;
   display: flex;
@@ -360,6 +360,7 @@ h2 {
 }
 
 .form-title {
+  width: 74.5vw;
   margin-left: 6.188vw;
   margin-top: 0.5vw;
   font-family: Montserrat, sans-serif;
