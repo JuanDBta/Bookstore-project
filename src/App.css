@@ -370,6 +370,8 @@ h2 {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
+  border-top: solid 1px #e8e8e8;
+  padding-top: 1vw;
 }
 
 .add-book-form {
