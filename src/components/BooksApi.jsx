@@ -32,7 +32,6 @@ const Books = () => {
 
   const handleAddBook = async () => {
     try {
-      const app_id = 'qiKtD5mkwRN26fLwBUzY';// eslint-disable-line
       const newBook = {
         item_id: uuidv4(),
         title,
@@ -40,14 +39,14 @@ const Books = () => {
         category,
       };
 
-      const response = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`, {// eslint-disable-line
+      const response = await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/qiKtD5mkwRN26fLwBUzY/books', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(newBook),
       });
-
+      window.location.reload();
       if (response.ok) {
         dispatch(addBooks());
       } else {
