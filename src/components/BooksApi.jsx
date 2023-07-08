@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBooks, deleteBook, getBooks } from '../redux/features/books/booksApiSlice';
 
 const Books = () => {
@@ -29,13 +30,32 @@ const Books = () => {
     }
   }, [deleted, dispatch]);
 
-  const handleAddBook = () => {
-    const newBook = {
-      title,
-      author,
-      category,
-    };
-    dispatch(addBooks(newBook));
+  const handleAddBook = async () => {
+    try {
+      const app_id = 'qiKtD5mkwRN26fLwBUzY';// eslint-disable-line
+      const newBook = {
+        item_id: uuidv4(), // eslint-disable-line
+        title,
+        author,
+        category,
+      };
+
+      const response = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${app_id}/books`, { // eslint-disable-line
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newBook),
+      });
+
+      if (response.ok) {
+        dispatch(addBooks());
+      } else {
+        throw new Error('Failed to add book');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleDeleteBook = (itemId) => {

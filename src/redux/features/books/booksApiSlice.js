@@ -4,19 +4,16 @@ import axios from 'axios';
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/qiKtD5mkwRN26fLwBUzY/books/';
 
 export const getBooks = createAsyncThunk('books/getBooks',
-  async (thunkAPI) => {
+  async (_, thunkAPI) => {
     try {
       const res = await axios(url);
       const resp = res.data;
       const array = Object.values(resp);
       const id = Object.keys(resp);
-      const newArray = [];
-      array.forEach((ele, i) => {
-        newArray.push({
-          ...ele[0],
-          item_id: id[i],
-        });
-      });
+      const newArray = array.map((ele, i) => ({
+        ...ele[0],
+        item_id: id[i],
+      }));
       return newArray;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
@@ -24,22 +21,26 @@ export const getBooks = createAsyncThunk('books/getBooks',
   });
 
 export const addBooks = createAsyncThunk('books/addBooks',
-  async (obj, thunkAPI) => {
+  async (newBook, thunkAPI) => {
     try {
-      const res = await axios.post(url, obj);
+      const res = await axios.post(url, newBook);
+      const addedBook = {
+        ...newBook,
+        item_id: res.data.name, // Assuming the response contains the item_id
+      };
       thunkAPI.dispatch(getBooks());
-      return res.data;
+      return addedBook;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
   });
 
 export const deleteBook = createAsyncThunk('books/deleteBook',
-  async (id, thunkAPI) => {
+  async (itemId, thunkAPI) => {
     try {
-      const res = await axios.delete(`${url}/${id}`);
+      await axios.delete(`${url}/${itemId}`);
       thunkAPI.dispatch(getBooks());
-      return res.data;
+      return itemId;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);
     }
@@ -89,4 +90,5 @@ const bookSlice = createSlice({
       });
   },
 });
+
 export default bookSlice.reducer;
