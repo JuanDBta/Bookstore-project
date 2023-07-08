@@ -77,7 +77,7 @@ Coming soon!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://juandbta.github.io/bookstore-project/)
+- [Coming Soon...]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
