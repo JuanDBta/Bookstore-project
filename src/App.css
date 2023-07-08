@@ -223,6 +223,7 @@ h2 {
 
 .book-element2 {
   margin-top: -0.8vw;
+  
 }
 
 .book-status {
@@ -297,6 +298,59 @@ h2 {
   line-height: normal;
   letter-spacing: normal;
   color: #121212;
+}
+
+.book-element3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  border-left: 1px #e8e8e8 solid;
+  height: 5.5vw;
+  padding-left: 8vw;
+  margin-top: 2vw;
+  margin-right: 7vw;
+}
+
+.current-chapter {
+  opacity: 0.5;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.book-chapter {
+  font-family: RobotoSlab;
+  font-size: 1.2vw;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  margin-top: 0.3vw;
+}
+
+.update-button {
+  width: 12vw;
+  height: 2.5vw;
+  margin-top: 1vw;
+  font-family: RobotoSlab, sans-serif;
+  font-size: 0.7vw;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 3px;
+  background-color: #0290ff;
 }
 
 .add-book-form {

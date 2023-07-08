@@ -108,7 +108,7 @@ const Books = () => {
 
             <div className="book-element3">
               <li className="current-chapter">CURRENT CHAPTER</li>
-              <li className="book-chapter">{book.current_chapter}</li>
+              <li className="book-chapter">Chapter 7</li>
               <button type="button" className="update-button">UPDATE PROGRESS</button>
             </div>
           </div>
