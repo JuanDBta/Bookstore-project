@@ -1,8 +1,8 @@
 import React from 'react';
-import Books from './Books';
+import BooksApi from './BooksApi';
 
 const Bookstore = () => (
-  <Books />
+  <BooksApi />
 );
 
 export default Bookstore;
