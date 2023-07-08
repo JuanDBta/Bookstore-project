@@ -12,6 +12,12 @@ const Books = () => {
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
+  const statusCircle = {
+    '--p': '80',
+    '--b': '5px',
+    '--c': '#0290ff',
+  };
+
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
@@ -92,9 +98,11 @@ const Books = () => {
 
             <div className="book-element2">
               <li className="book-status">
-                {book.status}
-                {' '}
-                Completed
+                <div className="circle" style={statusCircle} />
+                <div className="status-description">
+                  <h3 className="porcentage">64%</h3>
+                  <p className="status">Completed</p>
+                </div>
               </li>
             </div>
 
