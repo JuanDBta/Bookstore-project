@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Link,
 } from 'react-router-dom';
-import { RxAvatar } from 'react-icons/rx';
+import Icon from './icon.jpg';
 import Categories from './components/Categories';
 import BookStore from './components/BookStore';
 import './App.css';
@@ -17,7 +17,7 @@ function App() {
             <li><Link to="/" className="navbar-item">BOOKS</Link></li>
             <li><Link to="/categories" className="navbar-item">CATEGORIES</Link></li>
           </ul>
-          <RxAvatar className="nav-icon" />
+          <img src={Icon} className="nav-icon" alt="" />
         </nav>
         <Routes>
           <Route path="/" element={<BookStore />} />
